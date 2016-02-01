@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CameraTest2</string>
+    <string name="intro">Capture a picture to crop!</string>
+    <string name="picture">Picture</string>
+    <string name="capture">Launch Camera</string>
+
+</resources>
