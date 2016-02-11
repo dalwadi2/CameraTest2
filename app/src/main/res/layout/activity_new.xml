@@ -21,7 +21,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -30,20 +30,20 @@
                 android:text="Preview"
                 android:textSize="15dp" />
 
-            <TextView
-                android:id="@+id/mysize"
-                android:padding="10dp"
+
+            <ImageView
+                android:id="@+id/imgPreview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="size" />
+                android:src="@drawable/special" />
         </LinearLayout>
         <!-- To display picture taken -->
-        <ImageView
-            android:id="@+id/imgPreview"
+        <TextView
+            android:id="@+id/mysize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone" />
-
+            android:padding="10dp"
+            android:text="size" />
 
     </LinearLayout>
 

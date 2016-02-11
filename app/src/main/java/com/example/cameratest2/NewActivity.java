@@ -42,7 +42,7 @@ public class NewActivity extends AppCompatActivity {
     private Button switchbtn;
     private Button buttonUpload;
     private Uri filePath;
-    public static final String UPLOAD_URL = "http://vakratundasystem.in/harsh/upload.php";
+    public static final String UPLOAD_URL = "http://vakratundasystem.in/harsh/upload11.php";
     public static final String UPLOAD_KEY = "image";
     public static final String TAG = "Harsh";
     private int PICK_IMAGE_REQUEST = 1;
@@ -273,9 +273,9 @@ public class NewActivity extends AppCompatActivity {
     /* here image will be compress */
     public String getStringImage(Bitmap bmp) {
         int mm = sizeOf(bmp);
-        Log.e(TAG, "getStringImage: " + mm);
+        Log.e(TAG, "getStringImageSize: " + mm);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bmp.compress(Bitmap.CompressFormat.JPEG, 30, baos);
+        bmp.compress(Bitmap.CompressFormat.JPEG, 70, baos);
         byte[] imageBytes = baos.toByteArray();
         //String aa = imageBytes.toString();
         String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
@@ -286,9 +286,9 @@ public class NewActivity extends AppCompatActivity {
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR1)
     protected int sizeOf(Bitmap data) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB_MR1) {
-            return (data.getRowBytes() * data.getHeight())/1024;
+            return (data.getRowBytes() * data.getHeight()) / 1024;
         } else {
-            return data.getByteCount()/1024;
+            return data.getByteCount() / 1024;
         }
     }
     /**
